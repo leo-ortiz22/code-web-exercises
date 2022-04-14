@@ -19,25 +19,25 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
-function analyzerColor(color) {
-
-    return "message related" + color;
-
-    if (delcaredColor === (Purple.toLowerCase){
-
-    }
-        return ("Barney is the color" + color)
-
-        else if ( color === "blue") {
-        return ("The sky is the color" + color)
-    }
-    else{
-    return (color + " is on of the colors of the rainbow")
-    }
-
-}
-var  delcaredColor = prompt("Please pick a color: \n1. Purple \n2. Blue");
-console.log(analyzerColor("color"));
+// function analyzerColor(color) {
+//
+//     return "message related" + color;
+//
+//     if (delcaredColor === (Purple.toLowerCase){
+//
+//     }
+//         return ("Barney is the color" + color)
+//
+//         else if ( color === "blue") {
+//         return ("The sky is the color" + color)
+//     }
+//     else{
+//     return (color + " is on of the colors of the rainbow")
+//     }
+//
+// }
+// var  delcaredColor = prompt("Please pick a color: \n1. Purple \n2. Blue");
+// console.log(analyzerColor("color"));
 
 
 

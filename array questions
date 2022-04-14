@@ -1,0 +1,17 @@
+What is an array?
+is a data structure that holds an ordered liat of items.
+
+What is an array index?
+the location of an item in an array
+
+What is an array element?
+the data in th array
+
+What happens if you access an index outside of the size of an array?
+
+What is a forEach loop?
+
+Why use a forEach loop to iterate over an array instead of a for or while loop?
+
+Are arrays mutable? What does mutable mean?
+
