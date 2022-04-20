@@ -161,21 +161,21 @@
      * and console.log the relevant messages for each person
      */
 
-//     var shoppers = [
-//         {name: 'Cameron', amount: 180},
-//         {name: 'Ryan', amount: 250},
-//         {name: 'George', amount: 320}
-//     ];
-// for (var i = 0; i < shoppers.length; i += 1){
-// var discountedAmmount = 0;
-// if (shoppers[i].amount > 200){
-//     discountedAmmount = shoppers[i].amount * .12;
-// }
-// var shopperMessage = shoppers[i].name + ' purchased ' +
-//     shoppers[i].amount + ' and will get ' + discountedAmmount + ' off the final amount to pay a total of ' +
-//     (shoppers[i].amount - discountedAmmount)
-//
-// console.log(shopperMessage)}
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+for (var i = 0; i < shoppers.length; i += 1){
+var discountedAmmount = 0;
+if (shoppers[i].amount > 200){
+    discountedAmmount = shoppers[i].amount * .12;
+}
+var shopperMessage = shoppers[i].name + ' purchased ' +
+    shoppers[i].amount + ' and will get ' + discountedAmmount + ' off the final amount to pay a total of ' +
+    (shoppers[i].amount - discountedAmmount)
+
+console.log(shopperMessage)}
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
