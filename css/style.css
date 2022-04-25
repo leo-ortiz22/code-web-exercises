@@ -1,0 +1,27 @@
+.fancy-header {
+    color: red;
+    text-decoration: underline;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    color:black;
+    text-decoration: underline;
+}
+body {
+    /*background-color: greenyellow;*/
+    background-image: url();
+    background-size: cover;
+    font-style: normal;
+}
+ul, ol {
+    color: forestgreen;
+}
+table {
+    color: lightcoral;
+    font-size: 30px;
+}
+a:hover {
+    color: blue;
+}
