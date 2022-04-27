@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+
 </head>
-<body>
+<body>    <script src="">js/warm-up.js</script>
 <script>
 
     "use strict"
@@ -51,40 +53,40 @@
     // console.log(returnEveryOtherElement(['bob', 'sally', 'cathy', 'fred']), ['bob', 'cathy'] )// returns ['bob', 'cathy']
     // console.log(returnEveryOtherElement([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]), [10, 8 ,6, 4, 2])// returns [10, 8, 6, 4, 2]
     //
-    var trails = [
-        {
-            name: "Salado Creek Greenway",
-            distanceInMiles: 20,
-            isPaved: true
-        },
-        {
-            name: "Leon Creek Greenway",
-            distanceInMiles: 20.1,
-            isPaved: true
-        },
-        {
-            name: "McAllister Park: Blue Loop",
-            distanceInMiles: 6.3,
-            isPaved: false
-        },
-        {
-            name: "Phil Hardberger Park: Geology Trail",
-            distanceInMiles: 0.8,
-            isPaved: false
-        }
-    ]
-        function nonPavedDistance(arr) {
-        var total = 0;
-
-            arr.forEach(function (trail) {
-                if (!trail.isPaved) {
-                    total += trail.distanceInMiles;
-                }
-            })
-            return total
-        }
-
-    console.log(nonPavedDistance(trails));
+    // var trails = [
+    //     {
+    //         name: "Salado Creek Greenway",
+    //         distanceInMiles: 20,
+    //         isPaved: true
+    //     },
+    //     {
+    //         name: "Leon Creek Greenway",
+    //         distanceInMiles: 20.1,
+    //         isPaved: true
+    //     },
+    //     {
+    //         name: "McAllister Park: Blue Loop",
+    //         distanceInMiles: 6.3,
+    //         isPaved: false
+    //     },
+    //     {
+    //         name: "Phil Hardberger Park: Geology Trail",
+    //         distanceInMiles: 0.8,
+    //         isPaved: false
+    //     }
+    // ]
+    //     function nonPavedDistance(arr) {
+    //     var total = 0;
+    //
+    //         arr.forEach(function (trail) {
+    //             if (!trail.isPaved) {
+    //                 total += trail.distanceInMiles;
+    //             }
+    //         })
+    //         return total
+    //     }
+    //
+    // console.log(nonPavedDistance(trails));
 ;</script>
 </body>
 </html>
