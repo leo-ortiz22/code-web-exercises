@@ -73,27 +73,27 @@
 //   }
 // */
 //
-function creareNumberObject(num1, num2) {
-    if (num1 === num2) {
-        return
-            lowest: num1,
-            highest: num1
-        }
-    else
-        if (num1 > num2) {
-            return {
-                lowest: num2,
-                highest: num1
-            }
-        else
-            {
-                return {
-                    lowest: num1,
-                    highest: num2
-                }
-            }
-        }
-    }}}
+// function creareNumberObject(num1, num2) {
+//     if (num1 === num2) {
+//         return
+//             lowest: num1,
+//             highest: num1
+//         }
+//     else
+//         if (num1 > num2) {
+//             return {
+//                 lowest: num2,
+//                 highest: num1
+//             }
+//         else
+//             {
+//                 return {
+//                     lowest: num1,
+//                     highest: num2
+//                 }
+//             }
+//         }
+//     }}}
 
 
 
