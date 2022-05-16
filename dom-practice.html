@@ -6,20 +6,27 @@
 </head>
 <body>
 <div>
-   <input type="color" id="color"/>
-    <button id="changeColor" type="button" > Change color</button>
-
+<!--   <input type="color" id="color"/>-->
+<!--    <button id="changeColor" type="button" > Change color</button>-->
+<p id="doubleSize">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, quod?
+</p>
     <script >
 
-        var buttom = document.getElementById('changeColor');
-        var color= document.querySelector("#changeColor");
-        var body = document.querySelector("#body");
+        // var buttom = document.getElementById('changeColor');
+        // var color= document.querySelector("#changeColor");
+        // var body = document.querySelector("#body");
+
+        var  paragraph = document.querySelector('#doublesoze');
+
+            paragraph.addEventListener('dblclick', fucntion(event){
+            evey.target.style.fontsize = '12px';
+           var fontsize = parseFloat(even.target.style.fontSize)
+            console.log(fontSize)
+            evey.target.style.fontsize = '12px';
+        }
 
 
-
-        buttom.addEventListener("click",function(){
-            body.style.backgroundColor = "#" + color.value}
-        )
         'use strict'
     </script>
 
