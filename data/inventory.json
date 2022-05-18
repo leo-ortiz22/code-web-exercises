@@ -30,5 +30,21 @@
             "tool"
         ],
         "price": 10
-    }
+    },{
+    "title": "Rope",
+    "quantity": 14,
+    "categories": [
+        "tool",
+        "tie off"
+    ],
+    "price": 10
+},{
+    "title": "Drill",
+    "quantity": 5,
+    "categories": [
+        "tool",
+        "power tool"
+    ],
+    "price": 10
+}
 ]
