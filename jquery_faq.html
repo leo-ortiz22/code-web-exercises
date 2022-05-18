@@ -101,6 +101,28 @@
         </dd>
 
     </dl>
+    <h3>Denali National Park</h3>
+    <ul>
+        <li>DNP is home to the highest peak in North America, Denali. Called "The High One" in language of the Athabascan tribe, this towering peak stands at 20,320 feet above sea level.</li>
+        <li>The year of 1910 marked the first time that anyone had successfully summited Denali. It was a group of local residents who celebrated with hot chocolate and donuts.</li>
+        <li>Sable Pass inside DNP is known to be the best area to spot massive grizzly bears.</li>
+        <li>There are 169 different bird species, 39 mammal species, 14 fish species, and one species of amphibian known in Denali, whilst the park is also home to 1,500 species of vascular plants, lichens and mosses.</li>
+    </ul>
+    <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>World's First National Park.</li>
+        <li>A designated World Heritage Site and designated Biosphere Reserve.</li>
+        <li>3,472 square miles or 8,987 square km.</li>
+        <li>96 % in Wyoming an 3 % in Montana.</li>
+    </ul>
+    <h3>Yosemite National Park</h3>
+    <ul>
+        <li>El Capitan is the largest granite monolith in the world. It rises more than 3,000 feet above the valley floor and is a favorite for experienced rock climbers.</li>
+        <li>Yosemite Falls: This is the tallest waterfall in North America. Snow runoff cascades down the 2,425 foot drop, with peak flow in May. In winter, an ice cone is often visible at the top of the falls.</li>
+        <li>Giant Sequoias and Mariposa Grove: Mariposa Grove contains about 500 mature giant sequoias. </li>
+        <li>There are 840 miles of trails to hike in Yosemite National Park</li>
+    </ul>
+    <button>Make last li in list yellow</button>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script >
@@ -120,7 +142,33 @@
 $('dt').click(function () {
     $(this).css('background', 'red')
 })
+    //
+    // $("button").click(, function () {
+    //         $("ul").each(function () {
+    //         $(this).children().last().css("background","yellow");
+    //
+    //         })
+    //     })
+        $("button").click(function (){
+            $("li:last-child").css("background-color", "yellow");
+        });
+
+
+        $("h3").click(function () {
+            $(this).next().children().css("font-weight", "bold")
+        })
+        //
+        $("li").click(function () {
+        //     $("li:first-child").css("color", "blue")
+        //     $(this).siblings().first().css("color", "blue")
+            $(this).parent().children().first().css("color", "blue")
+        })
+
+
+
     });
+
+
 
 </script>
 
