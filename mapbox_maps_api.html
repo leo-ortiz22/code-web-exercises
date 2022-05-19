@@ -16,16 +16,15 @@
 
     <script src="js/api-keys.js"></script>
 </head>
+
 <body>
-<script src="js/jquery-3.6.0.min.js"></script>
-
-
 <div id='map' class="mx-auto mt-4"></div>
 <form class="mx-auto w-25 mt-2">
-     <label for="zoom">Set zoom:</label>
+    <label for="zoom">Set zoom:</label>
     <input type="text" class="my-2" name="zoom" id="zoom">
-<button id="zoomSubmit">Submit</button>
+    <button id="zoomSubmit">Submit</button>
 </form>
+
 <form class="mx-auto w-25 mt-2">
     <label for="setMarker">Enter an address</label>
     <input type="text" name="setMarker" id="setMarker" class="my-2">
@@ -42,33 +41,33 @@
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
         center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        zoom: 5 // starting zoom
     });
-// let codeupMarker = new mapboxgl.Marker()
-//     .setLngLat([-98.48962, 29.42692])
-//     .addTo(map);
-//
-//     let codeupPopup = new mapboxgl.Popup().setHTML('<p class = "mt-2" style="width: 250px;">Codeup</p>');
-//     codeupMarker.setPopup(codeupPopup);
+    let codeupMarker = new mapboxgl.Marker()
+        .setLngLat([-98.48962, 29.42692])
+        .addTo(map);
+
+        let codeupPopup = new mapboxgl.Popup().setHTML('<p class = "mt-2" style="width: 250px;">Codeup</p>');
+        codeupMarker.setPopup(codeupPopup);
 
     // document.getElementById("zoomSubmit").addEventListener('click', function(e){
     //     e.preventDefault();
     //     map.setZoom(document.getElementById("zoom").value);
-        $("#zoomSubmit").on("click", function (e) {
-            e.preventDefault();
-            map.setZoom($("#zoom").val());
+    $("#zoomSubmit").on("click", function (e) {
+        e.preventDefault();
+        map.setZoom($("#zoom").val());
         // })
-            document.getElementById("setMarkerButton").addEventListener('click', function(e) {
-                e.preventDefault();
-                let address = document.getElementById("setMarker").value;
-                console.log(address);
-                geocode(address, MAPBOX_API_TOKEN).then(function (coordinates) {
-                    console.log(coordinates);
-                    let userMarker = new mapboxgl.Marker()
-                        .setLngLat(coordinates)
-                        .addTo(map);
-                });
+        document.getElementById("setMarkerButton").addEventListener('click', function(e) {
+            e.preventDefault();
+            let address = document.getElementById("setMarker").value;
+            console.log(address);
+            geocode(address, MAPBOX_API_TOKEN).then(function (coordinates) {
+                console.log(coordinates);
+                let userMarker = new mapboxgl.Marker()
+                    .setLngLat(coordinates)
+                    .addTo(map);
             });
+        });
     })
 </script>
 
