@@ -26,16 +26,19 @@
     (function () {
         "use strict"
         // TODO: Create an AJAX GET request for the file under data/inventory.json
-
-        $.ajax("data/inventory.json").done(function (data) {
-            console.log(data)
-            data.forEach(function (tool) {
-                let title;
-                tool.title ? title = tool.title : title = "Untitled";
-                $("#insertProducts").append('<tr><td>' + title + '</td><td>' + tool.quantity + '</td>' + '<td>' + tool.price + '</td>' + '<td>' + tool.categories + '</td></tr>')
-            });
-
-        });
+  $.ajax("data/inventory.json").done(function (data) {
+    // console.log(data)
+    data.forEach(function (tool) {
+        $("#insertProducts").html("");
+        tool.title ? title = tool.title : title = "Untitled";
+        $("#insertProducts").append('<tr><td>' + tool.title + '</td><td>' + tool.quantity + '</td>' + '<td>' + tool.price + '</td>' + '<td>' + tool.categories.join(", ") + '</td></tr>')
+    });
+    //
+    // loadInventory();
+    // $("button").click(function () {
+    //     loadInventory();
+    // })
+});
 
         // TODO: Take the data from inventory.json and append it to the products table
 

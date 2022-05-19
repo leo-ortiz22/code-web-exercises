@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div id="posts">
+<div id="posts" class="container">
 
 </div>
 <script src="js/jquery-3.6.0.min.js"></script>
@@ -19,9 +19,9 @@
         $.ajax("data/blog.json").done(function (data) {
             console.log(data)
             data.forEach(function (blog) {
-                let title = '';
-                blog.title ? title = blog.title : title = "Untitled";
-                $("#posts").append(title + blog.title + blog.content+ blog.categories)
+                $("#insertProducts").html("");
+
+                $("#posts").append("<h2>"+ blog.title + "</h2>" + "<p>" + blog.content + "</p>" + "<p>" + blog.categories + "</p>" + "<p>" + blog.date + "</p>")
             });
         });
         })();
