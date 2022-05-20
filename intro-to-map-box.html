@@ -18,20 +18,21 @@
 </head>
 <body>
 <script src="js/jquery-3.6.0.min.js"></script>
-
+<div class="container mx-auto">
 
 <div id='map' class="mx-auto mt-4"></div>
 <form class="mx-auto w-25 mt-2">
      <label for="zoom">Set zoom:</label>
     <input type="text" class="my-2" name="zoom" id="zoom">
 <button id="zoomSubmit">Submit</button>
+    <select name="" id=""></select>
 </form>
 <form class="mx-auto w-25 mt-2">
     <label for="setMarker">Enter an address</label>
     <input type="text" name="setMarker" id="setMarker" class="my-2">
     <button id="setMarkerButton">Submit</button>
 </form>
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 
@@ -44,12 +45,15 @@
         center: [-74.5, 40], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
-// let codeupMarker = new mapboxgl.Marker()
-//     .setLngLat([-98.48962, 29.42692])
-//     .addTo(map);
-//
-//     let codeupPopup = new mapboxgl.Popup().setHTML('<p class = "mt-2" style="width: 250px;">Codeup</p>');
-//     codeupMarker.setPopup(codeupPopup);
+    restaurant.forEach(function () {
+        let codeupMarker = new mapboxgl.Marker()
+            .setLngLat([restaurant.longitude, restaurant.latitude])
+            .addTo(map);
+    });
+
+
+    let codeupPopup = new mapboxgl.Popup().setHTML('<p class = "mt-2" style="width: 250px;">Codeup</p>');
+    codeupMarker.setPopup(codeupPopup);
 
     // document.getElementById("zoomSubmit").addEventListener('click', function(e){
     //     e.preventDefault();
@@ -68,6 +72,8 @@
                         .setLngLat(coordinates)
                         .addTo(map);
                 });
+                let zoomSelection = document.querySelector('#zoom')
+                let user
             });
     })
 </script>
