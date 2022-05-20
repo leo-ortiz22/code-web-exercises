@@ -13,6 +13,13 @@
 
 </head>
 <body>
+
+
+<div id="current">Current temp</div>
+<div id="forecast"></div>
+<div id="date"></div>
+
+
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/api-keys.js"></script>
 <script src="js/weather-map.js"></script>
@@ -24,13 +31,18 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/satellite-streets-v11', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
+        center: [-97.72347,30.262032], // starting position [lng, lat]
         zoom: 9 // starting zoom
     });
+    const marker = new mapboxgl.Marker({
+        color: "red",
+        draggable: true
+    }).setLngLat([-97.72347,30.262032])
+        .addTo(map);
+    console.log(marker)
+
 </script>
-<div id="current">Current temp</div>
-<div id="forecast"></div>
-<div id="date"></div>
+
 
 
 </body>
