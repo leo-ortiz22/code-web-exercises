@@ -29,7 +29,7 @@ $.get("https://api.openweathermap.org/data/2.5/onecall", {
     data.daily.forEach(function (dailyForecast, index) {
         if (index < 5) {
             let datetime = new Date(dailyForecast.dt * 1000)
-            // let humidity = "Humidity: "
+
             // let date1 = months[datetime.getMonth()] + " " + datetime.getDate()
             $('#forecast').append('<h4>' + datetime + '</h4>' + '<p>'+ "Max: " + dailyForecast.temp.max + "°F" + '</p>' + '<p>' + "Low: " + dailyForecast.temp.min + "°F" + '</p>' + '<p>' + "Humidity: " + dailyForecast.humidity + "%" + '</p>')
             console.log(dailyForecast);
