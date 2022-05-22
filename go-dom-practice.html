@@ -150,6 +150,15 @@ When hovering over the divs within the div with a class of hidden-letters, a let
     $("#target").dblclick(function () {
         alert("BOX DOUBLE-CLICKED!");
     });
+    $( "#dark-mode-btn" ).click(function() {
+        if( $( "body" ).hasClass( "dark-mode" )) {
+            $( "body" ).removeClass( "dark-mode" );
+            $( "#dark-mode-btn" ).text( "Dark mode OFF" );
+        } else {
+            $( "body" ).addClass( "dark-mode" );
+            $( "#dark-mode-btn" ).text( "Dark mode ON" );
+        }
+    });
 </script>
 
 </body>
