@@ -97,16 +97,16 @@
     //       b. Reset the value in the addTodos input.
     // 5. If the value for the input is empty. Prevent it from creating another <li> element
 
-    let todoButton = document.getElementById("addTodo");
-    let todoInput = document.getElementById("todo")
-    let todoList = document.querySelector("#todosList");
+    var todoButton = document.getElementById("addTodo");
+    var todoInput = document.getElementById("todo");
+    var todoList = document.querySelector("#todosList");
 
-    todoButton.addEventListener("clicked", function (){
-        if (todoInput.value === "") return;
 
-        todoList.innerHtml += "<li>" + todoInput.value + "<li>";
+    todoButton.addEventListener("click", function () {
+        if (todoInput.value.trim() === "") return;
+        todoList.innerHTML += "<li>" + todoInput.value + "</li>";
         todoInput.value = "";
-        });
+    });
 
 
     // DOM Practice Question #3

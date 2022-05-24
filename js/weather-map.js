@@ -37,6 +37,14 @@ $.get("https://api.openweathermap.org/data/2.5/onecall", {
         }
 
     });
+    $("#clean-animal-list-btn").on('click', function(){
+        $("#animals-list").children().each(function (index, element){
+            if (index % 2 === 0){
+                $(this).html($(this).next().html() + $(this).html());
+                $(this).next().remove();
+            }
+        });
+    });
 
     // console.log('A step further - information for tomorrow: ', data.daily[1]);
 });

@@ -82,6 +82,7 @@
     <h1><span id="uppercase">THIS IS A TITLE</span></h1>
     <h1><span id="lowercase"></span></h1>
 
+
     <hr>
 
     <h1 class="section-header">Problem 4</h1>
@@ -92,7 +93,7 @@
 
     <h1 class="section-header">Problem 5</h1>
     <h3>Create</h3>
-    <form>
+    <form class="characterss">
         <input id="characters" type="text" placeholder="Enter text">
         <button id="list-chars-btn">Output list characters</button>
     </form>
@@ -128,37 +129,73 @@
     </div>
 
 </main>
-<!--When the box with the id of dbl-click-box is double-clicked, an alert should pop up with the text 'BOX DOUBLE-CLICKED!'
 
-Clicking on the button with an id of dark-mode-btn toggles dark mode on and off. HINT: changes should be applied to the body of the HTML.
 
-When the cursor hovers over the span with the id of uppercase (<span id="uppercase">), take the text of that span and display it, in lowercase, in the span with the id of lowercase (<span id="lowercase">).
+<!--The span with an id of counter should increment by one every second.-->
 
-The span with an id of counter should increment by one every second.
 
-When the user clicks on the button (<button id="list-chars-btn">), take any text the user has typed in the input field (<input id="characters">), and output each individual character as a separate list item within the unordered list (<ul id="characters-list">). Clicking the button multiple times should not append additional list items.
-
-When the user clicks on the button (<button id="clean-animal-list-btn">), the text of each list item that has a class (<li class="animal-list-item">) should be concatenated to the list item that immediately follows it.
-
-When hovering over the divs within the div with a class of hidden-letters, a letter will become visible in a span within the div being hovered over.-->
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 <script>
+    // <!--When the box with the id of dbl-click-box is double-clicked, an alert should pop up with the text 'BOX DOUBLE-CLICKED!'
+
 
     $("#target").dblclick(function () {
         alert("BOX DOUBLE-CLICKED!");
     });
-    $( "#dark-mode-btn" ).click(function() {
-        if( $( "body" ).hasClass( "dark-mode" )) {
-            $( "body" ).removeClass( "dark-mode" );
-            $( "#dark-mode-btn" ).text( "Dark mode OFF" );
+
+
+    // Clicking on the button with an id of dark-mode-btn toggles dark mode on and off. HINT: changes should be applied to the body of the HTML.
+
+    $("#dark-mode-btn").click(function () {
+        if ($("body").hasClass("dark-mode")) {
+            $("body").removeClass("dark-mode");
+            $("#dark-mode-btn").text("Dark mode OFF");
         } else {
-            $( "body" ).addClass( "dark-mode" );
-            $( "#dark-mode-btn" ).text( "Dark mode ON" );
+            $("body").addClass("dark-mode");
+            $("#dark-mode-btn").text("Dark mode ON");
         }
     });
+
+    // When the cursor hovers over the span with the id of uppercase (<span id="uppercase">), take the text of that span and display it, in lowercase, in the span with the id of lowercase (<span id="lowercase">).
+
+
+    $('#uppercase').hover(function () {
+        $(this).text($(this).text().toLowerCase());
+    }, function () {
+        $(this).text($(this).text().toUpperCase());
+    });
+
+
+    <!--When the user clicks on the button (<button id="list-chars-btn">), take any text the user has typed in the input field (<input id="characters">), and output each individual character as a separate list item within the unordered list (<ul id="characters-list">). Clicking the button multiple times should not append additional list items.-->
+
+
+    $("#list-chars-btn").click(function (e) {
+        e.preventDefault();
+        let inputNumber = $("#characters").val()
+        $("#characters-list").append('<li>' + inputNumber +'</li>');
+    });
+
+
+    // When the user clicks on the button (<button id="clean-animal-list-btn">), the text of each list item that has a class (<li class="animal-list-item">) should be concatenated to the list item that immediately follows it.
+
+    $("#clean-animal-list-btn").click(function () {
+        $("#animals-list").children().each(function (index, element) {
+            if (index % 2 === 0) {
+                $(this).html($(this).next().html() + $(this).html());
+                $(this).next().remove();
+            }
+        });
+    });
+    <!--When hovering over the divs within the div with a class of hidden-letters, a letter will become visible in a span within the div being hovered over.&ndash;&gt;-->
+    $(".hidden-letters").children().on("mouseenter", function () {
+        $(this).children().css("visibility", "visible");
+    });
+    console.log('#uppercase')
+
+
 </script>
 
 </body>
