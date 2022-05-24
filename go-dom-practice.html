@@ -190,10 +190,21 @@
         });
     });
     <!--When hovering over the divs within the div with a class of hidden-letters, a letter will become visible in a span within the div being hovered over.&ndash;&gt;-->
-    $(".hidden-letters").children().on("mouseenter", function () {
+    // $(".hidden-letters").children().mouseenter( function () {
+    //     $(this).children().css("visibility", "visible");
+    //     $(".hidden-letters").mouseenter(function() {
+    //         $("#hidden-letters").show();
+    //     }).mouseleave( function() {
+    //         $("#hidden-letters").hide();
+    //     });
+
+    $(".hidden-letters").children().hover(function () {
         $(this).children().css("visibility", "visible");
+    }, function(){
+        $(this).children().css("visibility", "hidden");
     });
-    console.log('#uppercase')
+
+
 
 
 </script>
