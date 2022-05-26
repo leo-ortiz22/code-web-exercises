@@ -35,22 +35,22 @@ const users = [
         yearsOfExperience: 9
     }
 ];
-// done Create a file named map-filter-reduce.js in your js directory and copy the users data below into it.
+// TODO Create a file named map-filter-reduce.js in your js directory and copy the users data below into it.
 
 
-//     Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
+//   TODO  Use .filter to create an array of user objects where each user object has at least 3 languages in the languages array.
 
 let userlang = users.filter(user => user.languages.length >= 3)
 console.log(userlang)
-//     Use .map to create an array of strings where each element is a user's email address
+//     TODO Use .map to create an array of strings where each element is a user's email address
 let emails = users.map(user => user.email);
 console.log(emails)
 
-// Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
+// TODO Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 let averageYears = (users.reduce((total, user) => total += user.yearsOfExperience, 0)) / users.length;
 
 console.log(averageYears);
-//     Use .reduce to get the longest email from the list of users.
+//     TODO Use .reduce to get the longest email from the list of users.
 
 let longestEmail = users.reduce((previousEmail, currentEmail) => {
     console.log(previousEmail.email);
@@ -73,10 +73,19 @@ console.log(longestEmail.email);
 
 //     Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 let userNames = users.reduce((names, person) => {
-    if (person.name === "justin") {
+// let delimiter = "."
+    if (person.name === "justin"){
         return names += person.name;
     } else {
         return names += `${person.name}, `
     }
 }, "");
 console.log(userNames);
+
+let uniqueLanguages = users.reduce((previousValue, currentValue,) =>{
+    currentValue.languages.forEach(language => {
+        if(previousValue.indexOf(language) === -1) previousValue.push(language)
+    })
+    return previousValue;
+},[])
+console.log(uniqueLanguages)
