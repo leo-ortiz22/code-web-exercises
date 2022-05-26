@@ -25,26 +25,26 @@ $.get("https://api.openweathermap.org/data/2.5/onecall", {
 
     const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
-    $("#current").append('<p>' + data.current.temp + "°F" + '</p>')
+    $("#current").append('<p class="card">' + data.current.temp + "°F" + '</pcard>')
     data.daily.forEach(function (dailyForecast, index) {
         if (index < 5) {
             let datetime = new Date(dailyForecast.dt * 1000)
 
             // let date1 = months[datetime.getMonth()] + " " + datetime.getDate()
-            $('#forecast').append('<h4>' + datetime + '</h4>' + '<p>'+ "Max: " + dailyForecast.temp.max + "°F" + '</p>' + '<p>' + "Low: " + dailyForecast.temp.min + "°F" + '</p>' + '<p>' + "Humidity: " + dailyForecast.humidity + "%" + '</p>')
+            $('#forecast').append('<div class="card">' + '<h4>' + datetime + '</h4>' + '<p>'+ "Max: " + dailyForecast.temp.max + "°F" + '</p>' + '<p>' + "Low: " + dailyForecast.temp.min + "°F" + '</p>' + '<p>' + "Humidity: " + dailyForecast.humidity + "%" + '</p>' + '<p>'+ "Pressure: " + dailyForecast.pressure + '</p>' +  '<p>'+ "Mph: " + dailyForecast.wind_speed + '</p>' +'</div>')
             console.log(dailyForecast);
 
         }
 
     });
-    $("#clean-animal-list-btn").on('click', function(){
-        $("#animals-list").children().each(function (index, element){
-            if (index % 2 === 0){
-                $(this).html($(this).next().html() + $(this).html());
-                $(this).next().remove();
-            }
-        });
-    });
+    // $("#clean-animal-list-btn").on('click', function(){
+    //     $("#animals-list").children().each(function (index, element){
+    //         if (index % 2 === 0){
+    //             $(this).html($(this).next().html() + $(this).html());
+    //             $(this).next().remove();
+    //         }
+    //     });
+    // });
 
     // console.log('A step further - information for tomorrow: ', data.daily[1]);
 });

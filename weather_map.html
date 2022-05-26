@@ -12,18 +12,20 @@
 
 
 </head>
-<body>
+<body style="background: #0fb784 ">
 
+<div class="row">
+    <div id="current">Current temp</div>
+    <div id="forecast"></div>
+    <div id="date"></div>
+</div>
 
-<div id="current">Current temp</div>
-<div id="forecast"></div>
-<div id="date"></div>
 
 
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/api-keys.js"></script>
 <script src="js/weather-map.js"></script>
-<div id="map" style="width: 400px; height: 300px"></div>
+<div id="map" style="width: 800px; height: 300px" ></div>
 <script>
 
     console.log("WEATHER_MAP")
@@ -40,6 +42,7 @@
     }).setLngLat([-97.72347,30.262032])
         .addTo(map);
     console.log(marker)
+
 
 </script>
 
